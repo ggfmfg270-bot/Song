@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b0b10">
+  <title>M Song</title>
+  <link rel="icon" href="/logo.svg" type="image/svg+xml">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="M Song">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#/"><img src="/logo.svg" alt="" width="36" height="36"><span>M <b>Song</b></span></a>
+    <div class="search">
+      <input id="q" type="search" placeholder="ابحث عن أغنية أو فنان…" autocomplete="off" aria-label="بحث">
+      <div id="suggest" class="suggest" hidden></div>
+    </div>
+    <div id="userbox"></div>
+  </header>
+
+  <nav id="nav" class="nav"></nav>
+  <main id="view" class="view"></main>
+
+  <div id="toast" class="toast" hidden></div>
+
+  <footer id="player" class="player" hidden>
+    <div class="p-info">
+      <div id="p-cover" class="cover sm"></div>
+      <div class="p-text"><div id="p-title" class="t"></div><div id="p-artist" class="a"></div></div>
+      <button id="p-like" class="icon" aria-label="إعجاب">♡</button>
+    </div>
+    <div class="p-main">
+      <div class="p-btns">
+        <button id="p-prev" class="icon" aria-label="السابق">⏮</button>
+        <button id="p-play" class="icon big" aria-label="تشغيل">▶</button>
+        <button id="p-next" class="icon" aria-label="التالي">⏭</button>
+      </div>
+      <div class="p-seek"><span id="p-cur">0:00</span><input id="p-bar" type="range" min="0" max="1000" value="0" aria-label="التقدم"><span id="p-dur">0:00</span></div>
+    </div>
+    <div class="p-vol"><span>🔊</span><input id="p-vol" type="range" min="0" max="100" value="80" aria-label="مستوى الصوت"></div>
+    <audio id="audio" preload="none"></audio>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
